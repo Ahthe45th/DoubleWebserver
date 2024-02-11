@@ -17,8 +17,6 @@ chats_data_locale = Location.general_storage() + '/nikahmubasit_chats/'
 
 webparts_blueprint = Blueprint('webparts_blueprint', __name__)
 
-# <Route path="/allstories" element={<BlogPage host={host}/>} />
-# <Route path="/comingsoon" element={<ThankYouPage host={host}/>} />
 @webparts_blueprint.route('/static/<type>/<file>', methods=['GET', 'POST'])
 def serve_static_react_files(type, file):
     return send_file(f"{template_folder}/templates/UKD/qaid_react/build/static/{type}/{file}")

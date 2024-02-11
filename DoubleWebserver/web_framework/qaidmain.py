@@ -13,7 +13,7 @@ from DoubleWebserver.web_framework.db_routes import db_blueprint
 
 logging.basicConfig(filename=Location.general_storage() + '/record_UKD_qaid.log', level=logging.DEBUG)
 
-app = Flask('UKD_SERVER', template_folder=os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+app = Flask('SOCIALMEDIA_SERVER', template_folder=os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 app.secret_key = "V1"
 
 app.config['MAX_CONTENT_LENGTH'] = 200 * 1024 * 1024

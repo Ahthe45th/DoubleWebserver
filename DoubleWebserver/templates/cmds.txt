@@ -1,0 +1,29 @@
+CREATE DATABASE businesses;
+use businesses;
+SHOW TABLES;
+
+SET FOREIGN_KEY_CHECKS=0;
+SELECT CONCAT('DROP TABLE IF EXISTS `', TABLE_SCHEMA, '`.`', TABLE_NAME, '`;')
+FROM information_schema.TABLES
+WHERE TABLE_SCHEMA = 'UKD';
+SET FOREIGN_KEY_CHECKS=1; 
+
+CREATE TABLE businesses.digitalstart (
+    article_id int auto_increment,
+    email varchar(255),
+    phonenumber varchar(255),
+    businessname
+);
+
+CREATE TABLE businesses.socialmedia (
+    journalist_id int auto_increment,
+    LastName varchar(255),
+    FirstName varchar(255),
+    MiddleName varchar(255),
+    Location varchar(255),
+    Email varchar(255),
+    Password varchar(255),
+    Profilepic TEXT,
+    Segments TEXT,
+    PRIMARY KEY (journalist_id)
+);

@@ -1,0 +1,1 @@
+*/5 * * * * /usr/bin/cat /home/ec2-user/RAHIB/RAHIB/SUBPROJECTS/UKDwebserver/UKD/templates/UKD/run_scheduling.txt | mysql UKD -u jahangir -pj.a.h.a.n.g.i.r.e.m.i.r.u.l.h.i.n.d > /home/ec2-user/sql.result

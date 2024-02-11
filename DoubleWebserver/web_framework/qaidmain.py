@@ -11,7 +11,7 @@ from DoubleWebserver.web_framework.general_routes import general_blueprint
 from DoubleWebserver.web_framework.qaidwebparts import webparts_blueprint
 from DoubleWebserver.web_framework.db_routes import db_blueprint
 
-logging.basicConfig(filename=Location.general_storage() + '/record_UKD_qaid.log', level=logging.DEBUG)
+logging.basicConfig(filename=Location.general_storage() + '/socialmediaqaid.log', level=logging.DEBUG)
 
 app = Flask('SOCIALMEDIA_SERVER', template_folder=os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 app.secret_key = "V1"

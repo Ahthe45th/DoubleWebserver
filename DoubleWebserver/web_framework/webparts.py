@@ -8,7 +8,7 @@ import RAHIB.UTILS.storage.Location as Location
 
 from flask import Blueprint, send_file
 
-log_pth = Location.general_storage() + '/UKDrecord.log'
+log_pth = Location.general_storage() + '/digitalrecord.log'
 template_folder=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 storage = Location.general_storage()

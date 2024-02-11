@@ -11,7 +11,7 @@ import mysql.connector as database
 import DoubleWebserver.utils.general as general_utils
 import DoubleWebserver.utils.database_functions as database_utils 
 
-log_pth = Location.general_storage() + '/UKDrecord.log'
+log_pth = Location.general_storage() + '/maintingrecord.log'
 logging.basicConfig(filename=log_pth, level=logging.DEBUG)
 
 storage = Location.general_storage()

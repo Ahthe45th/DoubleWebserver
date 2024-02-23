@@ -8,7 +8,7 @@ import RAHIB.UTILS.storage.Location as Location
 from flask import Blueprint, request, redirect, abort, g
 import mysql.connector as database
 
-import DoubleWebserver.utils.general as general_utils
+# import DoubleWebserver.utils.general as general_utils
 import DoubleWebserver.utils.database_functions as database_utils 
 
 log_pth = Location.general_storage() + '/maintingrecord.log'

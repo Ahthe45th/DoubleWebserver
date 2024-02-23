@@ -43,7 +43,7 @@ export default ({
   subheading = "Our Track Record",
   heading = (
     <>
-      We have been doing this <wbr /> since <span tw="text-primary-500">1999.</span>
+      About <span tw="text-primary-500">Us.</span>
     </>
   ),
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -89,17 +89,17 @@ export default ({
             {subheading && <Subheading>{subheading}</Subheading>}
             <Heading>{heading}</Heading>
             <Description>{description}</Description>
-            <Statistics>
+            {/* <Statistics>
               {statistics.map((statistic, index) => (
                 <Statistic key={index}>
                   <Value>{statistic.value}</Value>
                   <Key>{statistic.key}</Key>
                 </Statistic>
               ))}
-            </Statistics>
-            <PrimaryButton as="a" href={primaryButtonUrl}>
+            </Statistics> */}
+            {/* <PrimaryButton as="a" href={primaryButtonUrl}>
               {primaryButtonText}
-            </PrimaryButton>
+            </PrimaryButton> */}
           </TextContent>
         </TextColumn>
       </TwoColumn>

@@ -13,6 +13,7 @@ import CustomersLogoStripImage from "../../images/customers-logo-strip.png";
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-20 md:py-24`;
 const LeftColumn = tw.div`relative lg:w-5/12 text-center max-w-lg mx-auto lg:max-w-none lg:text-left`;
+const FullColumn = tw.div`relative w-full text-center mx-auto lg:text-left`;
 const RightColumn = tw.div`relative mt-12 lg:mt-0 flex-1 flex flex-col justify-center lg:self-end`;
 
 const Heading = tw.h1`font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-900 leading-tight`;
@@ -24,7 +25,7 @@ const Actions = styled.div`
     ${tw`sm:pr-48 pl-8 py-4 sm:py-5 rounded-full border-2 w-full font-medium focus:outline-none transition duration-300  focus:border-primary-500 hover:border-gray-500`}
   }
   button {
-    ${tw`w-full sm:absolute right-0 top-0 bottom-0 bg-primary-500 text-gray-100 font-bold mr-2 my-4 sm:my-2 rounded-full py-4 flex items-center justify-center sm:w-40 sm:leading-none focus:outline-none hover:bg-primary-900 transition duration-300`}
+    ${tw`w-full right-0 top-0 bottom-0 bg-primary-500 text-gray-100 font-bold mr-2 my-4 sm:my-2 rounded-full py-4 flex items-center justify-center sm:leading-none focus:outline-none hover:bg-primary-900 transition duration-300`}
   }
 `;
 
@@ -73,6 +74,41 @@ export default ({ roundedHeaderButton }) => {
               <img tw="min-w-0 w-full max-w-lg xl:max-w-3xl" src={DesignIllustration} alt="Design Illustration" />
             </IllustrationContainer>
           </RightColumn>
+        </TwoColumn>
+        <DecoratorBlob1 />
+      </Container>
+    </>
+  );
+};
+
+
+export function Hero2 ({ roundedHeaderButton }) {
+  return (
+    <>
+      <Header roundedHeaderButton={roundedHeaderButton} />
+      <Container>
+        <TwoColumn>
+          <FullColumn>
+            <Heading>
+              Whatever you want to build <span tw="text-primary-500">we've got you.</span>
+            </Heading>
+            <Paragraph>
+              Whether its a portfolio site, for your small business, an ecommerce-store or even your own social media platform. You've come to the right place
+            </Paragraph>
+            <Actions>
+              {/* <input type="text" placeholder="Your E-mail Address" /> */}
+              <button>Get Started</button>
+            </Actions>
+            {/* <CustomersLogoStrip>
+              <p>Our TRUSTED Customers</p>
+              <img src={CustomersLogoStripImage} alt="Our Customers" />
+            </CustomersLogoStrip> */}
+          </FullColumn>
+          {/* <RightColumn>
+            <IllustrationContainer>
+              <img tw="min-w-0 w-full max-w-lg xl:max-w-3xl" src={DesignIllustration} alt="Design Illustration" />
+            </IllustrationContainer>
+          </RightColumn> */}
         </TwoColumn>
         <DecoratorBlob1 />
       </Container>

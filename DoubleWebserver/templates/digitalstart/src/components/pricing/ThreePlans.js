@@ -91,22 +91,22 @@ export default ({
 }) => {
   const defaultPlans = [
     {
-      name: "Personal",
+      name: "Basic",
       price: "$17.99",
       duration: "Monthly",
       mainFeature: "Suited for Personal Blogs",
       features: ["30 Templates", "7 Landing Pages", "12 Internal Pages", "Basic Assistance"],
     },
+    // {
+    //   name: "Business",
+    //   price: "$37.99",
+    //   duration: "Monthly",
+    //   mainFeature: "Suited for Production Websites",
+    //   features: ["60 Templates", "8 Landing Pages", "22 Internal Pages", "Priority Assistance"],
+    //   featured: true,
+    // },
     {
-      name: "Business",
-      price: "$37.99",
-      duration: "Monthly",
-      mainFeature: "Suited for Production Websites",
-      features: ["60 Templates", "8 Landing Pages", "22 Internal Pages", "Priority Assistance"],
-      featured: true,
-    },
-    {
-      name: "Enterprise",
+      name: "Enhanced",
       price: "$57.99",
       duration: "Monthly",
       mainFeature: "Suited for Big Companies",

@@ -165,3 +165,122 @@ export default () => {
     </Container>
   );
 };
+
+export function Footer2 () {
+  return (
+    <Container>
+      <Content>
+        {/* <FiveColumns>
+          <Column>
+            <ColumnHeading>Main</ColumnHeading>
+            <LinkList>
+              <LinkListItem>
+                <Link href="#">Blog</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">FAQs</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Support</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">About Us</Link>
+              </LinkListItem>
+            </LinkList>
+          </Column>
+          <Column>
+            <ColumnHeading>Product</ColumnHeading>
+            <LinkList>
+              <LinkListItem>
+                <Link href="#">Log In</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Personal</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Business</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Team</Link>
+              </LinkListItem>
+            </LinkList>
+          </Column>
+          <Column>
+            <ColumnHeading>Press</ColumnHeading>
+            <LinkList>
+              <LinkListItem>
+                <Link href="#">Logos</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Events</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Stories</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Office</Link>
+              </LinkListItem>
+            </LinkList>
+          </Column>
+          <Column>
+            <ColumnHeading>Team</ColumnHeading>
+            <LinkList>
+              <LinkListItem>
+                <Link href="#">Career</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Founders</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Culture</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Onboarding</Link>
+              </LinkListItem>
+            </LinkList>
+          </Column>
+          <Column>
+            <ColumnHeading>Legal</ColumnHeading>
+            <LinkList>
+              <LinkListItem>
+                <Link href="#">GDPR</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Privacy Policy</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Terms of Service</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Disclaimer</Link>
+              </LinkListItem>
+            </LinkList>
+          </Column>
+        </FiveColumns> */}
+        <Divider />
+        <ThreeColRow>
+          <LogoContainer>
+            {/* <LogoImg src={LogoImage} /> */}
+            <LogoText>Digital Start.</LogoText>
+          </LogoContainer>
+          <CopywrightNotice>&copy; 2024 Digital Start Kenya. All Rights Reserved.</CopywrightNotice>
+          {/* <SocialLinksContainer>
+            <SocialLink href="https://facebook.com">
+              <FacebookIcon />
+            </SocialLink>
+            <SocialLink href="https://twitter.com">
+              <TwitterIcon />
+            </SocialLink>
+            <SocialLink href="https://youtube.com">
+              <YoutubeIcon />
+            </SocialLink>
+          </SocialLinksContainer> */}
+        </ThreeColRow>
+      </Content>
+      <DecoratorBlobContainer>
+        <DecoratorBlob1 />
+        <DecoratorBlob2 />
+      </DecoratorBlobContainer>
+    </Container>
+  );
+};

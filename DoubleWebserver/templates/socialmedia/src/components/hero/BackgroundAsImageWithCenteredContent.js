@@ -33,39 +33,17 @@ const Heading = styled.h1`
   }
 `;
 
-const PrimaryAction = tw.button`rounded-full px-8 py-3 mt-5 text-sm sm:text-base sm:mt-5 sm:px-8 sm:py-4 bg-gray-100 font-bold shadow transition duration-300 bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200 focus:outline-none focus:shadow-outline w-full`;
+const Text = styled.p`
+  ${tw`text-lg text-center sm:text-xl lg:text-lg xl:text-xl font-black text-gray-100 leading-snug -mt-24 sm:mt-0`}
+  span {
+    ${tw`inline-block mt-2`}
+  }
+`;
+
+const PrimaryAction = tw.button`rounded-full px-8 py-3 mt-5 text-sm sm:text-base sm:mt-5 sm:px-8 sm:py-4 bg-gray-100 font-bold shadow transition duration-300 bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200 focus:outline-none focus:shadow-outline w-1/2`;
 const PrimaryActionGreen = tw.button`rounded-full px-8 py-3 mt-5 text-sm sm:text-base sm:mt-5 sm:px-8 sm:py-4 bg-gray-100 font-bold shadow transition duration-300 bg-purple-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200 focus:outline-none focus:shadow-outline w-full`;
 
 export default function HeroApplicationForm() {
-  const [email, setEmail] = React.useState("")
-  const [phonenumber, setPhoneNumber] = React.useState("")
-  const [businessname, setBusinessname] = React.useState("")
-  const [issubmitting, setIsSubmitting] = React.useState(false)
-
-  const theurl = "/";
-  
-  function submitform() {
-    setIsSubmitting(true)
-    let data = {
-      email:email,
-      phonenumber:phonenumber,
-      businessname:businessname
-    }
-    const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    };
-
-    fetch(theurl, requestOptions)
-      .then(response => response.json())
-      .then(data => {
-        console.log('Recieved data.')
-      })
-      .catch(error => {
-        alert('There was an error!', error);
-      });
-  }
   const navLinks = [
     // <NavLinks key={1}>
     //   <NavLink href="#">
@@ -95,19 +73,10 @@ export default function HeroApplicationForm() {
         <StyledHeader links={navLinks} />
         <Content>
           <Heading>
-              Get your dream site, no effort required
+              Social Media Solutions
           </Heading>
-          
-          <div class="mt-4 mb-1 w-full">
-              <input class="bg-transparent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Phone Number:" onChange={(e) => setPhoneNumber(e.target.value)}/>
-              <input class="bg-transparent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Email:" onChange={(e) => setEmail(e.target.value)}/>
-              <input class="bg-transparent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Business name:" onChange={(e) => setBusinessname(e.target.value)}/>
-          </div> 
-
-          {issubmitting
-            ? <PrimaryActionGreen>Submitting info</PrimaryActionGreen>
-            : <PrimaryAction onClick={submitform}>Submit</PrimaryAction>
-          }
+          <Text>Getting your digital infrstructure up and running has and will never be this easy.</Text>
+          <PrimaryAction>Get Started</PrimaryAction>
         </Content>
       </HeroContainer>
     </Container>

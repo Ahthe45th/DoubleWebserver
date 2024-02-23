@@ -7,7 +7,6 @@ import RAHIB.UTILS.storage.Location as Location
 from flask import Flask
 from flask_cors import CORS
 
-# from DoubleWebserver.web_framework.general_routes import general_blueprint
 from DoubleWebserver.web_framework.webparts import webparts_blueprint
 from DoubleWebserver.web_framework.db_routes import db_blueprint
 

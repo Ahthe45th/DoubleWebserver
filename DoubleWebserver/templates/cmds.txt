@@ -9,10 +9,11 @@ WHERE TABLE_SCHEMA = 'UKD';
 SET FOREIGN_KEY_CHECKS=1; 
 
 CREATE TABLE businesses.digitalstart (
-    article_id int auto_increment,
+    biz_id int auto_increment,
     email varchar(255),
     phonenumber varchar(255),
-    businessname
+    businessname varchar(255),
+    PRIMARY KEY (biz_id)
 );
 
 CREATE TABLE businesses.socialmedia (

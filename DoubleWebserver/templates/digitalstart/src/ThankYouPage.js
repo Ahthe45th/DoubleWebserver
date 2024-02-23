@@ -46,11 +46,11 @@ export default () => {
         <Content2Xl>
           <NavRow>
             <LogoLink href="/">
-              <img src={logo} alt="" />
-              Treact
+              {/* <img src={logo} alt="" /> */}
+              DigitalStart
             </LogoLink>
             <div tw="flex flex-col lg:flex-row items-center">
-              <NavLink target="_blank" href="https://owaiskhan.me/post/free-tailwindcss-react-ui-kit">
+              {/* <NavLink target="_blank" href="https://owaiskhan.me/post/free-tailwindcss-react-ui-kit">
                 License & Usage
               </NavLink>
               <NavLink target="_blank" href="https://twitter.com/owaiswiz">
@@ -60,41 +60,12 @@ export default () => {
                 Who Am I ?
               </NavLink>
               <PrimaryNavLink target="_blank" href="https://gum.co/QaruQ">
-                Download Now
-              </PrimaryNavLink>
+                Download Now 
+              </PrimaryNavLink>*/}
             </div>
           </NavRow>
           <HeroRow>
-            <Heading>Thank You!</Heading>
-            <Description tw="mt-12">Your Download Will Begin Shortly. If it does not, <NavLink href={downloadUrl} download>click this link</NavLink>.</Description>
-            <div tw="mt-12 text-center">
-              I am working on another library similar to Treact, with <span tw="font-bold">more components</span> and a much <span tw="font-bold">better developer
-              experience</span>.
-            </div>
-            <div tw="mt-12 text-center">
-              If you liked Treact and would like to get updates on the library I am working on among other things, do <span tw="font-bold">follow</span> me on
-              Twitter/GitHub.
-              <div tw="mt-12 flex flex-col items-center">
-                <a
-                  href="https://twitter.com/owaiswiz?ref_src=twsrc%5Etfw"
-                  className="twitter-follow-button"
-                  data-size="large"
-                  data-show-count="true"
-                >
-                  Follow @TwitterDev
-                </a>
-                <div tw="mt-8">
-                  <GitHubButton
-                    href="https://github.com/owaiswiz"
-                    data-size="large"
-                    data-show-count="true"
-                    aria-label="Follow @owaiswiz on GitHub"
-                  >
-                    Follow @owaiswiz
-                  </GitHubButton>
-                </div>
-              </div>
-            </div>
+            <Heading>Thank You! You will be contacted shortly</Heading>
           </HeroRow>
         </Content2Xl>
       </Container>

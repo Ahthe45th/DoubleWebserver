@@ -17,7 +17,6 @@ app.secret_key = "V1"
 
 app.config['MAX_CONTENT_LENGTH'] = 200 * 1024 * 1024
 
-app.register_blueprint(general_blueprint) 
 app.register_blueprint(webparts_blueprint)
 app.register_blueprint(db_blueprint)
 

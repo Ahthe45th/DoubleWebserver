@@ -21,6 +21,10 @@ webparts_blueprint = Blueprint('webparts_blueprint', __name__)
 def serve_static_react_files(type, file):
     return send_file(f"{template_folder}/templates/digitalstart/build/static/{type}/{file}")
 
+@webparts_blueprint.route('/plans/<file>', methods=['GET', 'POST'])
+def serve_static_plans(file):
+    return send_file(f"{template_folder}/templates/digitalstart/build/index.html")
+
 @webparts_blueprint.route('/signup', methods=['GET', 'POST'])
 def signup():
     return send_file(f"{template_folder}/templates/digitalstart/build/index.html")

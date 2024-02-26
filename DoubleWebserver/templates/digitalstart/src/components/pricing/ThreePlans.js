@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { SectionDescription } from "components/misc/Typography.js";
-import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
+import { PrimaryLink as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
 import { ReactComponent as SvgDecoratorBlob } from "images/svg-decorator-blob-6.svg";
 
@@ -92,25 +92,25 @@ export default ({
   const defaultPlans = [
     {
       name: "Basic",
-      price: "$17.99",
-      duration: "Monthly",
-      mainFeature: "Suited for Personal Blogs",
-      features: ["30 Templates", "7 Landing Pages", "12 Internal Pages", "Basic Assistance"],
+      price: "KES 3,500",
+      duration: "Initial Set Up",
+      mainFeature: "Suited for Personal Websites such as Portfolio sites or Personal Projects",
+      features: ["350 per month"],
     },
-    // {
-    //   name: "Business",
-    //   price: "$37.99",
-    //   duration: "Monthly",
-    //   mainFeature: "Suited for Production Websites",
-    //   features: ["60 Templates", "8 Landing Pages", "22 Internal Pages", "Priority Assistance"],
-    //   featured: true,
-    // },
     {
-      name: "Enhanced",
-      price: "$57.99",
-      duration: "Monthly",
-      mainFeature: "Suited for Big Companies",
-      features: ["90 Templates", "9 Landing Pages", "37 Internal Pages", "Personal Assistance"],
+      name: "E-commerce",
+      price: "KES 15,000",
+      duration: "Initial Set Up",
+      mainFeature: "Suited for Business Owners Seeking to Sell Online",
+      features: ["2,500 per month"],
+      featured: true,
+    },
+    {
+      name: "App",
+      price: "KES 50,000",
+      duration: "Initial Set Up",
+      mainFeature: "Suited for Groups of organizations working on a single project",
+      features: ["5,000 per month"],
     },
   ];
 
@@ -157,7 +157,10 @@ export default ({
                 ))}
               </PlanFeatures>
               <PlanAction>
-                <BuyNowButton css={!plan.featured && highlightGradientsCss[index]}>{primaryButtonText}</BuyNowButton>
+                {subheading
+                    ? <BuyNowButton css={!plan.featured && highlightGradientsCss[index]} href={"/plans/"+plan.name}>{primaryButtonText}</BuyNowButton>
+                    : <BuyNowButton css={!plan.featured && highlightGradientsCss[index]} href={`https://wa.me/254701488925?text=I%20would%20like%20${plan.name}%20package%20`}>{primaryButtonText}</BuyNowButton>
+                }
               </PlanAction>
             </Plan>
           ))}

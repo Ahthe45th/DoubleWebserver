@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { SectionDescription } from "components/misc/Typography.js";
-import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
+import { PrimaryLink as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
 import { ReactComponent as SvgDecoratorBlob } from "images/svg-decorator-blob-6.svg";
 
@@ -74,7 +74,7 @@ const PlanFeatures = styled.div`
 
 const PlanAction = tw.div`px-4 sm:px-8 xl:px-16 py-8`;
 const BuyNowButton = styled(PrimaryButtonBase)`
-  ${tw`rounded-full uppercase tracking-wider py-4 w-full text-sm hover:shadow-xl transform hocus:translate-x-px hocus:-translate-y-px focus:shadow-outline`}
+  ${tw`rounded-full uppercase tracking-wider w-full text-sm hover:shadow-xl transform hocus:translate-x-px hocus:-translate-y-px focus:shadow-outline`}
 `;
 
 const DecoratorBlob = styled(SvgDecoratorBlob)`
@@ -85,32 +85,32 @@ const DecoratorBlob = styled(SvgDecoratorBlob)`
 export default ({
   subheading = "Pricing",
   heading = "Flexible Plans.",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description = "",
   plans = null,
   primaryButtonText = "Buy Now"
 }) => {
   const defaultPlans = [
     {
-      name: "Personal",
-      price: "$17.99",
-      duration: "Monthly",
-      mainFeature: "Suited for Personal Blogs",
-      features: ["30 Templates", "7 Landing Pages", "12 Internal Pages", "Basic Assistance"],
+      name: "Silver",
+      price: "KES 5,000",
+      duration: "Set Up",
+      mainFeature: "Suited for Beginners and Small Businesses",
+      features: ["1 Video AD", "Facebook Social Media Setup", "Instagram Social Media Setup"],
     },
+    // {
+    //   name: "Business",
+    //   price: "$37.99",
+    //   duration: "Monthly",
+    //   mainFeature: "Suited for Production Websites",
+    //   features: ["60 Templates", "8 Landing Pages", "22 Internal Pages", "Priority Assistance"],
+    //   featured: true,
+    // },
     {
-      name: "Business",
-      price: "$37.99",
-      duration: "Monthly",
-      mainFeature: "Suited for Production Websites",
-      features: ["60 Templates", "8 Landing Pages", "22 Internal Pages", "Priority Assistance"],
-      featured: true,
-    },
-    {
-      name: "Enterprise",
-      price: "$57.99",
-      duration: "Monthly",
-      mainFeature: "Suited for Big Companies",
-      features: ["90 Templates", "9 Landing Pages", "37 Internal Pages", "Personal Assistance"],
+      name: "Gold",
+      price: "KES 7,500",
+      duration: "Set Up",
+      mainFeature: "Suited for More Advanced Enterprises",
+      features: ["1 Video AD", "Facebook Social Media Setup", "Instagram Social Media Setup", "Sales Material Development"],
     },
   ];
 
@@ -157,7 +157,10 @@ export default ({
                 ))}
               </PlanFeatures>
               <PlanAction>
-                <BuyNowButton css={!plan.featured && highlightGradientsCss[index]}>{primaryButtonText}</BuyNowButton>
+                {subheading
+                  ? <BuyNowButton css={!plan.featured && highlightGradientsCss[index]} href={"/plans/"+plan.name}>{primaryButtonText}</BuyNowButton>
+                  : <BuyNowButton css={!plan.featured && highlightGradientsCss[index]} href={`https://wa.me/254759728957?text=I%20would%20like%20${plan.name}%20package%20`}>{primaryButtonText}</BuyNowButton>
+                }
               </PlanAction>
             </Plan>
           ))}

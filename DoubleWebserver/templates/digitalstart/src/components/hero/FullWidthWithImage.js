@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
 import Header, { LogoLink, NavLinks, NavLink as NavLinkBase } from "../headers/light.js";
+import Pricing from "components/pricing/ThreePlans.js";
 
 const StyledHeader = styled(Header)`
   ${tw`justify-between`}
@@ -83,6 +84,47 @@ export default ({
           </Content>
         </LeftColumn>
         <RightColumn></RightColumn>
+      </TwoColumn>
+    </Container>
+  );
+};
+
+export function Hero2 ({
+  navLinks = [
+    <NavLinks key={1}>
+    </NavLinks>
+  ],
+  heading = (
+    <>
+      Find Perfect Hotels
+      <wbr />
+      <br />
+      <span tw="text-primary-500">anywhere you go.</span>
+    </>
+  ),
+  description = "We've been in the hotels business across the world for 5 years now. We assure you that you will always enjoy your stay with us.",
+  primaryActionUrl = "#",
+  primaryActionText = "Sign Up",
+  secondaryActionUrl = "#",
+  secondaryActionText = "Search Hotels",
+  pricing=[]
+}) {
+  return (
+    <Container>
+      <TwoColumn>
+        <LeftColumn>
+          <StyledHeader links={navLinks} collapseBreakpointClass="sm" />
+          <Content>
+            <Heading>{heading}</Heading>
+            <Paragraph>{description}</Paragraph>
+            <Actions>
+              <a href={primaryActionUrl} className="action primaryAction">
+                {primaryActionText}
+              </a>
+            </Actions>
+          </Content>
+        </LeftColumn>
+        <Pricing plans={pricing} heading="" subheading="" description=""/>
       </TwoColumn>
     </Container>
   );

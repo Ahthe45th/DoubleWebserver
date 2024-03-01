@@ -15,11 +15,10 @@ const Description = tw(SectionDescription)`w-full text-center`;
 
 const PlansContainer = tw.div`flex justify-between flex-col lg:flex-row items-center lg:items-stretch relative`;
 const Plan = styled.div`
-  ${tw`w-full max-w-sm mt-16 lg:mr-8 lg:last:mr-0 text-center px-8 rounded-lg shadow relative pt-2 text-gray-900 bg-white flex flex-col`}
+  ${tw`w-full max-w-sm mt-4 lg:mr-8 lg:last:mr-0 text-center px-8 rounded-lg shadow relative pt-2 text-gray-900 bg-white flex flex-col`}
   .planHighlight {
     ${tw`rounded-t-lg absolute top-0 inset-x-0 h-2`}
   }
-
   ${props =>
     props.featured &&
     css`
@@ -44,7 +43,49 @@ background: linear-gradient(135deg, rgba(76,81,191,1) 0%, rgba(102,126,234,1) 10
       }
       ${BuyNowButton} {
         ${tw`bg-gray-100 text-primary-500 hocus:bg-gray-300 hocus:text-primary-800`}
-    `}
+  `}
+  ${props =>
+    props.featured2 &&
+    css`
+    background: rgb(245, 101, 101);
+      background: linear-gradient(115deg, rgba(245, 101, 101, 1) 0%, rgba(254, 178, 178, 1) 100%);
+      ${tw`bg-primary-500 text-gray-100`}
+      .planHighlight {
+        ${tw`hidden`}
+      }
+      .duration {
+        ${tw`text-gray-200!`}
+      }
+      ${PlanFeatures} {
+        ${tw`border-gray-100`}
+      }
+      .feature:not(.mainFeature) {
+        ${tw`text-gray-300!`}
+      }
+      ${BuyNowButton} {
+        ${tw`bg-gray-100 text-gray-100 hocus:bg-gray-300 hocus:text-primary-800`}
+  `}
+  ${props =>
+    props.featured3 &&
+    css`
+    background: rgb(56, 178, 172);
+    background: linear-gradient(115deg, rgba(56, 178, 172, 1) 0%, rgba(129, 230, 217, 1) 100%);
+      ${tw`bg-primary-500 text-gray-100`}
+      .planHighlight {
+        ${tw`hidden`}
+      }
+      .duration {
+        ${tw`text-gray-200!`}
+      }
+      ${PlanFeatures} {
+        ${tw`border-gray-100`}
+      }
+      .feature:not(.mainFeature) {
+        ${tw`text-gray-300!`}
+      }
+      ${BuyNowButton} {
+        ${tw`bg-gray-100 text-gray-100 hocus:bg-gray-300 hocus:text-primary-800`}
+  `}
 `;
 
 const PlanHeader = styled.div`
@@ -96,6 +137,7 @@ export default ({
       duration: "Initial Set Up",
       mainFeature: "Suited for Personal Websites such as Portfolio sites or Personal Projects",
       features: ["350 per month"],
+      featured2: true
     },
     {
       name: "E-commerce",
@@ -111,6 +153,7 @@ export default ({
       duration: "Initial Set Up",
       mainFeature: "Suited for Groups of organizations working on a single project",
       features: ["5,000 per month"],
+      featured3: true
     },
   ];
 
@@ -141,7 +184,7 @@ export default ({
         </HeaderContainer>
         <PlansContainer>
           {plans.map((plan, index) => (
-            <Plan key={index} featured={plan.featured}>
+            <Plan key={index} featured={plan.featured} featured2={plan.featured2} featured3={plan.featured3}>
               {!plan.featured && <div className="planHighlight" css={highlightGradientsCss[index % highlightGradientsCss.length]} />}
               <PlanHeader>
                 <span className="name">{plan.name}</span>
@@ -157,10 +200,7 @@ export default ({
                 ))}
               </PlanFeatures>
               <PlanAction>
-                {subheading
-                    ? <BuyNowButton css={!plan.featured && highlightGradientsCss[index]} href={"/plans/"+plan.name}>{primaryButtonText}</BuyNowButton>
-                    : <BuyNowButton css={!plan.featured && highlightGradientsCss[index]} href={`https://wa.me/254701488925?text=I%20would%20like%20${plan.name}%20package%20`}>{primaryButtonText}</BuyNowButton>
-                }
+                <BuyNowButton css={!plan.featured && highlightGradientsCss[index]} href={"/plans/"+plan.name}>{primaryButtonText}</BuyNowButton>
               </PlanAction>
             </Plan>
           ))}

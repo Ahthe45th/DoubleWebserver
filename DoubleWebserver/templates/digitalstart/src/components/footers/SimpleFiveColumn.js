@@ -44,10 +44,10 @@ export default () => {
             <LogoText>Digital Start KE.</LogoText>
           </LogoContainer>
           <CompanyDescription>
-            Copyright 2024
+            Copyright 2021
           </CompanyDescription>
           <SocialLinksContainer>
-            <SocialLink href="https://facebook.com">
+            {/* <SocialLink href="https://facebook.com">
               <FacebookIcon />
             </SocialLink>
             <SocialLink href="https://twitter.com">
@@ -55,7 +55,7 @@ export default () => {
             </SocialLink>
             <SocialLink href="https://youtube.com">
               <YoutubeIcon />
-            </SocialLink>
+            </SocialLink> */}
           </SocialLinksContainer>
         </WideColumn>
         {/* <Column>

@@ -11,7 +11,6 @@ import Footer from "components/footers/SimpleFiveColumn.js";
 export default () => (
   <AnimationRevealPage>
     <Hero />
-    <Pricing/>
     <Footer />
   </AnimationRevealPage>
 );

@@ -41,13 +41,13 @@ export default () => {
         <WideColumn>
           <LogoContainer>
             {/* <LogoImg src={LogoImage} /> */}
-            <LogoText>Digital Start KE.</LogoText>
+            <LogoText>Social Media Solutions Kenya.</LogoText>
           </LogoContainer>
           <CompanyDescription>
-            Copyright 2024
+            Copyright 2020
           </CompanyDescription>
           <SocialLinksContainer>
-            <SocialLink href="https://facebook.com">
+            {/* <SocialLink href="https://facebook.com">
               <FacebookIcon />
             </SocialLink>
             <SocialLink href="https://twitter.com">
@@ -55,7 +55,7 @@ export default () => {
             </SocialLink>
             <SocialLink href="https://youtube.com">
               <YoutubeIcon />
-            </SocialLink>
+            </SocialLink> */}
           </SocialLinksContainer>
         </WideColumn>
         {/* <Column>

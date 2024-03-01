@@ -102,6 +102,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 
 import ComponentRenderer from "ComponentRenderer.js";
 import MainLandingPage from "MainLandingPage.js";
+import GetStartedPage from "GetStartedPage.js";
 import ThankYouPage from "ThankYouPage.js";
 import IndividualPlan from "pages/IndividualPLan";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -116,6 +117,7 @@ export default function App() {
       <Router>
         <Routes>
           <Route path="/" element={<MainLandingPage />} />
+          <Route path="/getstarted" element={<GetStartedPage/>} />
           <Route path="/applicationrecieved" element={<ThankYouPage />} />
           <Route path="/plans/:item" element={<IndividualPlan />} />
         </Routes>

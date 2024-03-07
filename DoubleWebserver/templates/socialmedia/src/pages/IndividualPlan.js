@@ -53,7 +53,7 @@ export default () => {
               heading={item} 
               pricing={theplan} 
               description={theplan[0].description}
-              primaryActionUrl={`https://wa.me/254759728957?text=I%20would%20like%20${item}%20package%20`}
+              primaryActionUrl={`https://wa.me/254114306772?text=I%20would%20like%20${item}%20package%20`}
             />
             <Footer />
         </AnimationRevealPage>
